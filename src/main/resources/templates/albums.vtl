@@ -1,0 +1,13 @@
+<h3>Your albums</h3>
+<h4> search your albums</h4>
+<form action="search-title" method="get">
+  <label for="title-search">album title</label>
+  <input type="text" name="title-search" id="title-search">
+  <button type="submit">search</button>
+</form>
+#foreach( $album in $albums)
+  <hr>
+  <p>$album.getTitle()</p>
+  <p>by: $album.getArtist()</p>
+  <hr>
+#end
